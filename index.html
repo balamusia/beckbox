@@ -3,11 +3,15 @@
 function createCheckbox () {
   const box = document.createElement('input')
   box.type = 'checkbox'
+  box.style.position = 'absolute'
+	box.style.left = event.clientX
+  box.style.top = event.clientY
   document.body.appendChild(box)
+  
   
 }
 
-  window.addEventListener('load', createCheckbox)
+  window.addEventListener('mousemove', createCheckbox)
   
   
 
